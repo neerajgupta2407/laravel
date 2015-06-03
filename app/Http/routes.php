@@ -16,6 +16,11 @@ Route::get('/about', 'PagesController@about');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('article','ArticlesController@index');
+Route::get('article/{id}','ArticlesController@show');
+
+Route::get('foo',function(){ return "Bar";});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

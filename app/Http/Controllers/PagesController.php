@@ -8,10 +8,14 @@ use Illuminate\Http\Request;
 class PagesController extends Controller {
 
 	//
-public function about()
-{
-$data = array('name' => '<a>neeraj1</a>');
-return view('pages.about',$data);
-}
+	public function about()
+	{
+		$data = array(
+					'name' => '<a>neeraj1</a>',
+					'people' => array('a','d','w','a'),		
+		
+		);
+		return view('pages.about',$data);
+	}
 
 }
