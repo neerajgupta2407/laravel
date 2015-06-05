@@ -4,7 +4,8 @@ use App\Article;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+
+use Request;
 
 class ArticlesController extends Controller {
 
@@ -49,7 +50,8 @@ class ArticlesController extends Controller {
 	{
 		//
 		
-		return "Get all articles";
+		//return "Get all articles";
+		return view('articles.create');
 	}
 
 	/**
@@ -60,6 +62,9 @@ class ArticlesController extends Controller {
 	public function store()
 	{
 		//
+		$input = Request::get('title');
+		$input = Request::get('body');
+		return $input;
 	}
 
 	

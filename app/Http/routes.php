@@ -17,7 +17,10 @@ Route::get('/about', 'PagesController@about');
 Route::get('home', 'HomeController@index');
 
 Route::get('article','ArticlesController@index');
+Route::get('article/create','ArticlesController@create');
 Route::get('article/{id}','ArticlesController@show');
+Route::post('article','ArticlesController@store');
+
 
 Route::get('foo',function(){ return "Bar";});
 
