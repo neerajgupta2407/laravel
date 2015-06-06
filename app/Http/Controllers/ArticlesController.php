@@ -33,7 +33,7 @@ class ArticlesController extends Controller {
 	{
 		//
 		$ar = Article::findorFail($id);
-		//dd($ar);
+		!dd($ar);
 		
 		return view('articles.articleShow', compact('ar'));
 		//return "Get all articles";
@@ -62,9 +62,9 @@ class ArticlesController extends Controller {
 	public function store()
 	{
 		//
-		$input = Request::get('title');
-		$input = Request::get('body');
-		return $input;
+	
+		Article::create(Request::all());
+		redirect( url ('article'));
 	}
 
 	

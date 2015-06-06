@@ -24,8 +24,8 @@
 
 
 <div class="form-group">
-{!! Form::label('piblished_at','Published At:') !!}
-{!! Form::input('date', 'piblished_at' , null, ['class' => 'form-controll',]) !!}
+{!! Form::label('piblished_at','Published At:')!!}
+{!! Form::input('date', 'piblished_at' ,date('Y-m-d'), ['class' => 'form-controll',]) !!}
 
 </div>
 
